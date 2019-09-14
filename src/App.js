@@ -1,7 +1,7 @@
 import React from 'react';
 import './bootstrap.styles.css';
 import Navbar from "./components/layout/Navbar";
-import UserItem from "./components/UserItem";
+import Users from "./components/users/User";
 
 class App extends React.Component{
     render(){
@@ -10,8 +10,8 @@ class App extends React.Component{
                 <nav className="navbar bg-dark">
                     <Navbar />
                 </nav>
-                <div>
-                    <UserItem/>
+                <div className='container'>
+                    <Users/>
                 </div>
             </div>
 
