@@ -30,16 +30,26 @@ this.setState({isLoaded: true});
         this.setState({users: response.data.items, isLoaded: false})
     }
 
+    //Clear users from state
+    clearUsers =()=>{
+        this.setState({users: [], isLoading: false})
+    }
+
 
     render(){
+        const{users, isLoaded}=this.state;
         return (
             <div>
                 <nav className="navbar bg-dark">
                     <Navbar />
                 </nav>
                 <div className='container'>
-                    <Search searchUsers={this.searchUsers}/>
-                    <Users users={this.state.users} isLoaded={this.state.isLoaded}/>
+                    <Search
+                        searchUsers={this.searchUsers}
+                        clearUsers={this.clearUsers}
+                        showClear={users.length > 0 ? true:false}
+                    />
+                    <Users users={users} isLoaded={isLoaded}/>
                 </div>
             </div>
 
