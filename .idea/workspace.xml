@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719a1102-c518-4849-a600-215654268ce6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/users/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
@@ -80,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568467175187</updated>
       <workItem from="1568467176355" duration="8505000" />
-      <workItem from="1568716792902" duration="7200000" />
+      <workItem from="1568716792902" duration="9350000" />
     </task>
     <task id="LOCAL-00001" summary="Init v1">
       <created>1568470298822</created>
@@ -117,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568723536739</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Init v6 +Environment variables">
+      <created>1568724792198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568724792198</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +151,7 @@
     <MESSAGE value="Init v3 +User" />
     <MESSAGE value="Init v4 +HTTP Request (await async)" />
     <MESSAGE value="Init v5 +Spinner component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init v5 +Spinner component" />
+    <MESSAGE value="Init v6 +Environment variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init v6 +Environment variables" />
   </component>
 </project>

@@ -3,6 +3,7 @@ import './bootstrap.styles.css';
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/User";
 import axios from 'axios'
+import Search from "./components/users/Search";
 
 class App extends React.Component{
 
@@ -26,6 +27,7 @@ class App extends React.Component{
                     <Navbar />
                 </nav>
                 <div className='container'>
+                    <Search/>
                     <Users users={this.state.users} isLoaded={this.state.isLoaded}/>
                 </div>
             </div>
