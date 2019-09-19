@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import './bootstrap.styles.css';
+import './App.css';
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
 import axios from 'axios'
@@ -64,7 +64,7 @@ class App extends React.Component {
         const {users, isLoaded, user} = this.state;
         return (
             <Router>
-                <div>
+                <div className='App'>
                     <nav>
                         <Navbar/>
                     </nav>
@@ -84,13 +84,14 @@ class App extends React.Component {
                                            <Users users={users} isLoaded={isLoaded}/>
                                        </>)
                                    }/>
-                                   <Route exact
-                                          path='/about'
-                                          component={AboutInfo}/>
-                                          <Route exact
-                                                 path='/user/:login'
-                                                 render={props =>(<User {...props} getUser={this.getUser} user={user} isLoaded={isLoaded}/>)}
-                                                 />
+                            <Route exact
+                                   path='/about'
+                                   component={AboutInfo}/>
+                            <Route exact
+                                   path='/user/:login'
+                                   render={props => (
+                                       <User {...props} getUser={this.getUser} user={user} isLoaded={isLoaded}/>)}
+                            />
                         </Switch>
                     </div>
                 </div>
