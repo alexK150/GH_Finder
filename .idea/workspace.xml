@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719a1102-c518-4849-a600-215654268ce6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/Alert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Search.js" afterDir="false" />
@@ -81,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1568467175187</updated>
       <workItem from="1568467176355" duration="8505000" />
-      <workItem from="1568716792902" duration="13063000" />
+      <workItem from="1568716792902" duration="14029000" />
+      <workItem from="1568893373103" duration="1027000" />
     </task>
     <task id="LOCAL-00001" summary="Init v1">
       <created>1568470298822</created>
@@ -139,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568812664392</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Init v9 +Clear state button">
+      <created>1568837686886</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568837686886</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +177,7 @@
     <MESSAGE value="Init v6 +Environment variables" />
     <MESSAGE value="Init v7 +Search form" />
     <MESSAGE value="Init v8 +Search form refactor(passing props)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init v8 +Search form refactor(passing props)" />
+    <MESSAGE value="Init v9 +Clear state button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init v9 +Clear state button" />
   </component>
 </project>
