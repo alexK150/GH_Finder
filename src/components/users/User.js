@@ -1,32 +1,24 @@
-import React from 'react';
-import UserItem from './UserItem'
-import Spinner from "../layout/Spinner.js";
-import PropTypes from 'prop-types'
+import React, {Component} from 'react';
 
-const User=({users, isLoaded})=> {
+class User extends Component {
 
-    if (isLoaded){
-       return <Spinner/>
-    }else {
+    componentDidMount() {
+
+        this.props.getUser(this.props.match.params.login)
+    }
+
+    render() {
+
+        const {name, avatar_url, location, bio, blog, login, html_url, followers, following, public_repos, public_gists, hireable}=this.props.user;
+
+        const {isLoaded }=this.props;
+
         return (
-            <div style={userStyle}>
-                {users.map(user => (
-                    <UserItem key={user.id} user={user}/>
-                ))}
+            <div>
+               {this.props.user.name}
             </div>
         );
     }
-}
-
-User.propTypes = {
-    users: PropTypes.array.isRequired,
-    isLoaded: PropTypes.bool.isRequired
-}
-
-const userStyle ={
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridGap: '1rem'
 }
 
 export default User;
