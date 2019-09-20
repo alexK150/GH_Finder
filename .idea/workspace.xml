@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719a1102-c518-4849-a600-215654268ce6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/repos/RepoItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/repos/Repos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bootstrap.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/AboutInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AboutInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/User.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,6 +33,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/deep_copy.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,7 +87,9 @@
       <workItem from="1568467176355" duration="8505000" />
       <workItem from="1568716792902" duration="14029000" />
       <workItem from="1568893373103" duration="7741000" />
-      <workItem from="1568915525137" duration="6728000" />
+      <workItem from="1568915525137" duration="7551000" />
+      <workItem from="1568965610623" duration="404000" />
+      <workItem from="1568966409885" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="Init v1">
       <created>1568470298822</created>
@@ -171,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568918715294</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Init v13 +User Component UI">
+      <created>1568925036380</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568925036380</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +215,7 @@
     <MESSAGE value="Init v10 +Alert Component (if Search empty)" />
     <MESSAGE value="Init v11 +AboutInfo +Router" />
     <MESSAGE value="Init v12 +User component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init v12 +User component" />
+    <MESSAGE value="Init v13 +User Component UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init v13 +User Component UI" />
   </component>
 </project>

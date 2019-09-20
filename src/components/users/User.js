@@ -1,25 +1,29 @@
-import React, {Component, Fragment} from 'react';
-import PropTypes from 'prop-types'
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Spinner from "../layout/Spinner";
 import {Link} from "react-router-dom";
+import Repos from "../repos/Repos";
 
 class User extends Component {
 
     componentDidMount() {
         this.props.getUser(this.props.match.params.login)
+        this.props.getUsersRepos(this.props.match.params.login)
     }
 
     static propTypes = {
         isLoaded: PropTypes.bool,
         user: PropTypes.object.isRequired,
-        getUser: PropTypes.func.isRequired
+        getUser: PropTypes.func.isRequired,
+        getUsersRepos: PropTypes.func.isRequired,
+        repos: PropTypes.array.isRequired
     }
 
     render() {
 
         const {name, avatar_url, location, bio, company, blog, login, html_url, followers, following, public_repos, public_gists, hireable} = this.props.user;
 
-        const {isLoaded} = this.props;
+        const {isLoaded, repos} = this.props;
 
         if (isLoaded) return <Spinner/>;
 
@@ -41,29 +45,29 @@ class User extends Component {
                         <p>Location: {location}</p>
                     </div>
                     <div>
-                        {bio && (<Fragment>
+                        {bio && (<>
                             <h3>Bio</h3>
                             <p>{bio}</p>
-                        </Fragment>)}
+                        </>)}
                         <a href={html_url}
                            className='btn btn-dark my-1'>
                             Visit GitHub Profile
                         </a>
                         <ul>
                             <li>
-                                {login && <Fragment>
+                                {login && <>
                                     <strong>Username: </strong>{login}
-                                </Fragment>}
+                                </>}
                             </li>
                             <li>
-                                {company && <Fragment>
+                                {company && <>
                                     <strong>Company: </strong>{company}
-                                </Fragment>}
+                                </>}
                             </li>
                             <li>
-                                {blog && <Fragment>
+                                {blog && <>
                                     <strong>Website: </strong>{blog}
-                                </Fragment>}
+                                </>}
                             </li>
                         </ul>
                     </div>
@@ -75,6 +79,8 @@ class User extends Component {
                     <div className="badge badge-light">Repositories: {public_repos}</div>
                     <div className="badge badge-dark">Gists: {public_gists}</div>
                 </div>
+
+                <Repos repos={repos}/>
             </>
         );
     }

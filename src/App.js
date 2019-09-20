@@ -15,7 +15,8 @@ class App extends React.Component {
         users: [],
         user: {},
         isLoaded: false,
-        alert: null
+        alert: null,
+        repos: []
     }
 
     // async componentDidMount() {
@@ -46,6 +47,16 @@ class App extends React.Component {
 
     }
 
+    getUsersRepos = async username => {
+
+        this.setState({isLoaded: true});
+
+        const response = await axios.get(`https://api.github.com/users/${username}/repos?per_page=5&sort=created:asc&client_id=${process.env.REACT_APP_GH_CLIENT_ID}&client_secret=${process.env.REACT_APP_GH_CLIENT_SECRET}`);
+
+        this.setState({repos: response.data, isLoaded: false})
+
+    }
+
     setAlert = (message, type) => {
         this.setState({alert: {message, type}})
 
@@ -61,7 +72,7 @@ class App extends React.Component {
 
 
     render() {
-        const {users, isLoaded, user} = this.state;
+        const {users, repos, isLoaded, user} = this.state;
         return (
             <Router>
                 <div className='App'>
@@ -90,7 +101,14 @@ class App extends React.Component {
                             <Route exact
                                    path='/user/:login'
                                    render={props => (
-                                       <User {...props} getUser={this.getUser} user={user} isLoaded={isLoaded}/>)}
+                                       <User {...props}
+                                             getUser={this.getUser}
+                                             getUsersRepos={this.getUsersRepos}
+                                             user={user}
+                                             repos={repos}
+                                             isLoaded={isLoaded}
+
+                                       />)}
                             />
                         </Switch>
                     </div>
