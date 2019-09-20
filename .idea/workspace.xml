@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="719a1102-c518-4849-a600-215654268ce6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Alert.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +86,7 @@
       <workItem from="1568893373103" duration="7741000" />
       <workItem from="1568915525137" duration="7551000" />
       <workItem from="1568965610623" duration="404000" />
-      <workItem from="1568966409885" duration="6803000" />
+      <workItem from="1568966409885" duration="10536000" />
     </task>
     <task id="LOCAL-00001" summary="Init v1">
       <created>1568470298822</created>
@@ -192,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568973097610</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Init v15 refactor User component (class C converted to functional C +using useEffect Hook)">
+      <created>1568974424605</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1568974424605</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +236,7 @@
     <MESSAGE value="Init v13 +User Component UI" />
     <MESSAGE value="Init v14 +Repos, RepoItem. Displaying 5 Repos in UI" />
     <MESSAGE value="Init v15 refactor Search component (class C converted to functional C +Hooks(useState))" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init v15 refactor Search component (class C converted to functional C +Hooks(useState))" />
+    <MESSAGE value="Init v15 refactor User component (class C converted to functional C +using useEffect Hook)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init v15 refactor User component (class C converted to functional C +using useEffect Hook)" />
   </component>
 </project>
