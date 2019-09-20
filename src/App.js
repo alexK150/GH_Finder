@@ -8,6 +8,7 @@ import Search from "./components/users/Search";
 import Alert from './components/layout/Alert'
 import AboutInfo from "./components/pages/AboutInfo";
 import User from "./components/users/User";
+import GithubState from "./context/github/GithubState";
 
 const App = () => {
     const [users, setUsers] = useState([]);
@@ -60,46 +61,48 @@ const App = () => {
     }
 
     return (
-        <Router>
-            <div className='App'>
-                <nav>
-                    <Navbar/>
-                </nav>
-                <div className='container'>
-                    <Alert alert={alert}/>
-                    <Switch>
-                        <Route exact
-                               path='/'
-                               render={props =>
-                                   (<>
-                                       <Search
-                                           searchUsers={searchUsers}
-                                           clearUsers={clearUsers}
-                                           showClear={users.length > 0}
-                                           setAlert={showAlert}
-                                       />
-                                       <Users users={users} isLoaded={isLoaded}/>
-                                   </>)
-                               }/>
-                        <Route exact
-                               path='/about'
-                               component={AboutInfo}/>
-                        <Route exact
-                               path='/user/:login'
-                               render={props => (
-                                   <User {...props}
-                                         getUser={getUser}
-                                         getUsersRepos={getUsersRepos}
-                                         user={user}
-                                         repos={repos}
-                                         isLoaded={isLoaded}
+        <GithubState>
+            <Router>
+                <div className='App'>
+                    <nav>
+                        <Navbar/>
+                    </nav>
+                    <div className='container'>
+                        <Alert alert={alert}/>
+                        <Switch>
+                            <Route exact
+                                   path='/'
+                                   render={props =>
+                                       (<>
+                                           <Search
+                                               searchUsers={searchUsers}
+                                               clearUsers={clearUsers}
+                                               showClear={users.length > 0}
+                                               setAlert={showAlert}
+                                           />
+                                           <Users users={users} isLoaded={isLoaded}/>
+                                       </>)
+                                   }/>
+                            <Route exact
+                                   path='/about'
+                                   component={AboutInfo}/>
+                            <Route exact
+                                   path='/user/:login'
+                                   render={props => (
+                                       <User {...props}
+                                             getUser={getUser}
+                                             getUsersRepos={getUsersRepos}
+                                             user={user}
+                                             repos={repos}
+                                             isLoaded={isLoaded}
 
-                                   />)}
-                        />
-                    </Switch>
+                                       />)}
+                            />
+                        </Switch>
+                    </div>
                 </div>
-            </div>
-        </Router>
+            </Router>
+        </GithubState>
     );
 }
 
