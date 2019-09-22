@@ -11,25 +11,13 @@ import User from "./components/users/User";
 import GithubState from "./context/github/GithubState";
 
 const App = () => {
-    const [users, setUsers] = useState([]);
-    const [user, setUser] = useState({});
     const [repos, setRepos] = useState([]);
     const [isLoaded, setLoading] = useState(false);
     const [alert, setAlert] = useState(null);
 
-// search GH Users
-
 
     //Get single Github user
-    const getUser = async username => {
-        setLoading(true);
 
-        const response = await axios.get(`https://api.github.com/users/${username}?client_id=${process.env.REACT_APP_GH_CLIENT_ID}&client_secret=${process.env.REACT_APP_GH_CLIENT_SECRET}`);
-
-        setUser(response.data.items);
-        setLoading(false)
-
-    }
 
     const getUsersRepos = async username => {
         setLoading(true);
@@ -48,10 +36,6 @@ const App = () => {
     }
 
     //Clear users from state
-    const clearUsers = () => {
-        setUser([]);
-        setLoading(false);
-    }
 
     return (
         <GithubState>
@@ -68,11 +52,13 @@ const App = () => {
                                    render={props =>
                                        (<>
                                            <Search
-                                               clearUsers={clearUsers}
-                                               showClear={users.length > 0}
+                                               // clearUsers={clearUsers}
+                                               // showClear={users.length > 0}
                                                setAlert={showAlert}
                                            />
-                                           <Users users={users} isLoaded={isLoaded}/>
+                                           <Users
+                                               // users={users}
+                                               isLoaded={isLoaded}/>
                                        </>)
                                    }/>
                             <Route exact
@@ -82,12 +68,8 @@ const App = () => {
                                    path='/user/:login'
                                    render={props => (
                                        <User {...props}
-                                             getUser={getUser}
                                              getUsersRepos={getUsersRepos}
-                                             user={user}
                                              repos={repos}
-                                             isLoaded={isLoaded}
-
                                        />)}
                             />
                         </Switch>
