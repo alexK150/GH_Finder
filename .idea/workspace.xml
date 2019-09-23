@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="719a1102-c518-4849-a600-215654268ce6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/context/alert/AlertState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/alert/alertContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/alert/alertReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/github/GithubState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/github/GithubState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/github/githubReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/github/githubReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/Search.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +90,7 @@
       <workItem from="1568893373103" duration="7741000" />
       <workItem from="1568915525137" duration="7551000" />
       <workItem from="1568965610623" duration="404000" />
-      <workItem from="1568966409885" duration="22590000" />
+      <workItem from="1568966409885" duration="25034000" />
     </task>
     <task id="LOCAL-00001" summary="Init v1">
       <created>1568470298822</created>
@@ -230,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569183476344</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Init v21 implementation of Context to getUserRepos func">
+      <created>1569245505758</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1569245505758</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +280,7 @@
     <MESSAGE value="Init v18 implemented Context" />
     <MESSAGE value="Init v19 implementation of Context to searchUser func" />
     <MESSAGE value="Init v20 implementation of Context to User func" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init v20 implementation of Context to User func" />
+    <MESSAGE value="Init v21 implementation of Context to getUserRepos func" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init v21 implementation of Context to getUserRepos func" />
   </component>
 </project>
